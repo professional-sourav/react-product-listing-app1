@@ -21,7 +21,7 @@ const ProductListing = () => {
         setLoading(true)
 
         fetchProducts()
-            .then((data) => {
+            .then((data: Products) => {
                 setProducts(data)
             })
             .catch((error) => {
@@ -40,7 +40,7 @@ const ProductListing = () => {
         <List
         height={400}
         itemCount={products.total}
-        itemSize={products.total + 50}
+        itemSize={products.total + 130}
         width={600}>
             {({ index, style }) => {
                 const product: Product = products.products[index % products.limit]

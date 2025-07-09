@@ -10,7 +10,10 @@ const SingleProduct: React.FC<SingleProductProps> = ({ product }) => {
     <div key={product.id} className="product-item">
         <h3>{product.title}</h3>
         <p>{product.description}</p>
-        <p>Price: ${product.price}</p>    
+        <p>Price: ${product.price}</p>
+        <p>Category: {product.category}</p>
+        <p>Rating: {product.rating}</p>
+        
     </div>
   )
 }
